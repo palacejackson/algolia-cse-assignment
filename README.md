@@ -13,11 +13,11 @@ This repo contains my completed CSE assignment.
 
 ### 2. Configure environment variables
 Copy `.env.test` and rename it `.env`
-`
+
 Set the following values in `.env`:
-    ALGOLIA_APP_ID=your_app_id
-    ALGOLIA_API_KEY=your_admin_api_key
-    ALGOLIA_INDEX=your_index_name
+   - ALGOLIA_APP_ID=your_app_id
+   - ALGOLIA_API_KEY=your_admin_api_key
+   - ALGOLIA_INDEX=your_index_name
 
 ### 3. Run the data upload script
     node scrips/uploadProducts.js
