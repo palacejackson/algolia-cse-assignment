@@ -20,7 +20,7 @@ Set the following values in `.env`:
    - ALGOLIA_INDEX=your_index_name
 
 ### 3. Run the data upload script
-    node scrips/uploadProducts.js
+    node scripts/uploadProducts.js
 
 This script:
 - Reads `products.json`
