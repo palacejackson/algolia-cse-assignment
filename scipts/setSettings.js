@@ -17,7 +17,7 @@ const index = client.initIndex(indexName);
         'brand',
         'categories',
         'price',
-        'type' // to use for personalization
+        'type' // to use for personalisation
       ],
       searchableAttributes: [
         'categories',
