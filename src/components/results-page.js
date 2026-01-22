@@ -3,6 +3,9 @@ import instantsearch from 'instantsearch.js';
 import aa from "search-insights";
 import { searchBox, hits, pagination, refinementList, configure, rangeSlider } from 'instantsearch.js/es/widgets';
 import resultHit from '../templates/result-hit';
+import dotenv from 'dotenv';
+
+dotenv.config({ path: new URL('../../.env', import.meta.url) })
 
 /**
  * @class ResultsPage
