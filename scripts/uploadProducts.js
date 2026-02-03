@@ -45,10 +45,17 @@ const index = client.initIndex(indexName);
       return false;
     }
 
+    let discountedCount = 0;
+
     // apply 20% discount 
 
     products = products.map((product) => {
-      if (isCameraProduct && Number.isFinite(product.price)) {
+      //     const isCameraProduct =
+      // Array.isArray(product.categories) &&
+      // product.categories.some((c) => typeof c === "string" && c.toLowerCase() === "cameras & camcorders");
+
+      if (isCameraProduct(product) && Number.isFinite(product.price)) {
+        discountedCount++;
         return {
           ...product,
           price: Math.floor(product.price * 0.8),
@@ -59,7 +66,7 @@ const index = client.initIndex(indexName);
     });
 
     await index.saveObjects(products);
-    console.log(`${products.length} products uploaded successfully`);
+    console.log(`${products.length} products uploaded successfully with ${discountedCount} discounted camera products`);
 
   } catch (err) {
     console.error('Upload failed:', err);
